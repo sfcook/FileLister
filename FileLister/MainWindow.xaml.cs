@@ -20,14 +20,30 @@ namespace FileLister
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		string instructions = "Drag and drop files here.";
+		HashSet<string> files = new HashSet<string>(); //unique list of files
+
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			tbxList.Text = instructions;
 		}
 
 		private void tbxListDrop(object sender, DragEventArgs e)
 		{
-			MessageBox.Show("dropped");
+			string[] paths = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+			foreach (string str in paths)
+			{
+				files.Add(str);
+			}
+
+			tbxList.Text = "";
+			foreach (string str in files)
+			{
+				tbxList.Text += str + "\n";
+			}
 		}
 
 		private void tbxListDrag(object sender, DragEventArgs e)
