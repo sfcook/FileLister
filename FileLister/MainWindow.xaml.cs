@@ -58,5 +58,19 @@ namespace FileLister
 				e.Effects = DragDropEffects.None;
 			}
 		}
+
+		private void btnClear_Click(object sender, RoutedEventArgs e)
+		{
+			tbxList.Text = instructions;
+			files.Clear();
+		}
+
+		private void btnClip_Click(object sender, RoutedEventArgs e)
+		{
+			if (tbxList.Text != instructions)
+			{
+				Clipboard.SetData(DataFormats.Text, (Object)tbxList.Text);
+			}
+		}
 	}
 }

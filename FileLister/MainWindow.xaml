@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FileLister" Height="350" Width="525">
     <Grid>
-		<TextBox x:Name="tbxList" Margin="0,0,0,35" IsReadOnly="True" PreviewDragEnter="tbxListDrag" PreviewDragOver="tbxListDrag" PreviewDrop="tbxListDrop"/>
+		<TextBox x:Name="tbxList" Margin="0,0,0,35" IsReadOnly="True" PreviewDragEnter="tbxListDrag" PreviewDragOver="tbxListDrag" PreviewDrop="tbxListDrop" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
 		<!-- PreviewDrop must be used for textboxes -->
-		<Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="150"/>
-		<Button x:Name="btnClip" Content="To Clipboard" HorizontalAlignment="Right" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="150"/>
+		<Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="150" Click="btnClear_Click"/>
+		<Button x:Name="btnClip" Content="To Clipboard" HorizontalAlignment="Right" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="150" Click="btnClip_Click"/>
 
 	</Grid>
 </Window>
