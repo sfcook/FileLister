@@ -44,6 +44,11 @@ namespace FileLister
 			{
 				tbxList.Text += str + "\n";
 			}
+
+			if (chkAutoClip.IsChecked.Value)
+			{
+				Clipboard.SetData(DataFormats.Text, (Object)tbxList.Text);
+			}
 		}
 
 		private void tbxListDrag(object sender, DragEventArgs e)

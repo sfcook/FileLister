@@ -7,6 +7,7 @@
 		<!-- PreviewDrop must be used for textboxes -->
 		<Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="150" Click="btnClear_Click"/>
 		<Button x:Name="btnClip" Content="To Clipboard" HorizontalAlignment="Right" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="150" Click="btnClip_Click"/>
+		<CheckBox x:Name="chkAutoClip" Content="Auto Clipboard" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom"/>
 
 	</Grid>
 </Window>
