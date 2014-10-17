@@ -24,5 +24,23 @@ namespace FileLister
 		{
 			InitializeComponent();
 		}
+
+		private void tbxListDrop(object sender, DragEventArgs e)
+		{
+			MessageBox.Show("dropped");
+		}
+
+		private void tbxListDrag(object sender, DragEventArgs e)
+		{
+			if(e.Data.GetDataPresent(DataFormats.FileDrop))
+			{
+				e.Effects = DragDropEffects.All;
+				e.Handled = true; //important
+			}
+			else
+			{
+				e.Effects = DragDropEffects.None;
+			}
+		}
 	}
 }

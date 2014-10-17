@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FileLister" Height="350" Width="525">
     <Grid>
-		<TextBox x:Name="tbxList" Margin="0,0,0,35"/>
+		<TextBox x:Name="tbxList" Margin="0,0,0,35" IsReadOnly="True" PreviewDragEnter="tbxListDrag" PreviewDragOver="tbxListDrag" PreviewDrop="tbxListDrop"/>
 		<Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="150"/>
 		<Button x:Name="btnClip" Content="To Clipboard" HorizontalAlignment="Right" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="150"/>
 
