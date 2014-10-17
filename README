@@ -1,0 +1,3 @@
+Simple program that builds a list of files by dragging and dropping them onto the text area.
+
+Written in C# with .net and wpf.
